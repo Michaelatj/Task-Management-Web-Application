@@ -174,21 +174,7 @@ export default function TaskManagementApp() {
                         </div>
                       </div>
                     </div>
-                    <div className="bg-green-50 rounded-xl p-4 border border-green-100 shadow-sm">
-                      <div className="flex items-center gap-3">
-                        <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
-                          <Check className="w-6 h-6 text-white" />
-                        </div>
-                        <div>
-                          <div className="text-sm font-medium text-green-600">
-                            Completed
-                          </div>
-                          <div className="text-2xl font-bold text-green-900">
-                            {tasks.filter((t) => t.status === "done").length}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
+
                     <div className="bg-yellow-50 rounded-xl p-4 border border-yellow-100 shadow-sm">
                       <div className="flex items-center gap-3">
                         <div className="w-12 h-12 bg-yellow-500 rounded-xl flex items-center justify-center">
@@ -203,6 +189,22 @@ export default function TaskManagementApp() {
                               tasks.filter((t) => t.status === "in-progress")
                                 .length
                             }
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div className="bg-green-50 rounded-xl p-4 border border-green-100 shadow-sm">
+                      <div className="flex items-center gap-3">
+                        <div className="w-12 h-12 bg-green-500 rounded-xl flex items-center justify-center">
+                          <Check className="w-6 h-6 text-white" />
+                        </div>
+                        <div>
+                          <div className="text-sm font-medium text-green-600">
+                            Completed
+                          </div>
+                          <div className="text-2xl font-bold text-green-900">
+                            {tasks.filter((t) => t.status === "done").length}
                           </div>
                         </div>
                       </div>

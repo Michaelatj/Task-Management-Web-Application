@@ -238,10 +238,10 @@ export function TaskForm({ onSubmit, initialData, onCancel }: TaskFormProps) {
               <SelectItem value="to-do" className="text-gray-600">
                 <div className="flex items-center gap-2">To Do</div>
               </SelectItem>
-              <SelectItem value="in-progress" className="text-blue-600">
+              <SelectItem value="in-progress">
                 <div className="flex items-center gap-2">In Progress</div>
               </SelectItem>
-              <SelectItem value="done" className="text-green-600">
+              <SelectItem value="done">
                 <div className="flex items-center gap-2">Done</div>
               </SelectItem>
             </SelectContent>

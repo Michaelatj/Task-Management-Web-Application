@@ -77,22 +77,6 @@ export function TaskStats({ tasks }: TaskStatsProps) {
           </CardContent>
         </Card>
 
-        <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
-          <CardContent className="p-6">
-            <div className="flex items-center gap-4">
-              <div className="p-3 bg-green-500 rounded-xl shadow-lg">
-                <Check className="h-6 w-6 text-white" />
-              </div>
-              <div>
-                <p className="text-sm font-medium text-green-700">Completed</p>
-                <p className="text-3xl font-bold text-green-900">
-                  {statusCounts.done}
-                </p>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
-
         <Card className="bg-gradient-to-br from-yellow-50 to-yellow-100 border-yellow-200">
           <CardContent className="p-6">
             <div className="flex items-center gap-4">
@@ -105,6 +89,22 @@ export function TaskStats({ tasks }: TaskStatsProps) {
                 </p>
                 <p className="text-3xl font-bold text-yellow-900">
                   {statusCounts["in-progress"]}
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        <Card className="bg-gradient-to-br from-green-50 to-green-100 border-green-200">
+          <CardContent className="p-6">
+            <div className="flex items-center gap-4">
+              <div className="p-3 bg-green-500 rounded-xl shadow-lg">
+                <Check className="h-6 w-6 text-white" />
+              </div>
+              <div>
+                <p className="text-sm font-medium text-green-700">Completed</p>
+                <p className="text-3xl font-bold text-green-900">
+                  {statusCounts.done}
                 </p>
               </div>
             </div>
@@ -162,7 +162,7 @@ export function TaskStats({ tasks }: TaskStatsProps) {
               <div className="space-y-2">
                 <div className="flex justify-between text-sm">
                   <span className="font-medium text-gray-700">In Progress</span>
-                  <span className="font-bold text-blue-600">
+                  <span className="font-bold text-yellow-600">
                     {progressRate.toFixed(1)}%
                   </span>
                 </div>
@@ -183,7 +183,7 @@ export function TaskStats({ tasks }: TaskStatsProps) {
                 <div className="text-xs text-gray-500 font-medium">To Do</div>
               </div>
               <div className="text-center">
-                <div className="text-2xl font-bold text-blue-600">
+                <div className="text-2xl font-bold text-yellow-600">
                   {statusCounts["in-progress"]}
                 </div>
                 <div className="text-xs text-gray-500 font-medium">
